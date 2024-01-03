@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +24,7 @@ body {
     align-items: center;
 }
 
-header{
+header {
     position: relative;
     display: flex;
     width: 100%;
@@ -31,9 +32,36 @@ header{
     background-color: rgb(53, 163, 53);
     padding: 1em 2em;
     margin-bottom: auto;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header > nav{
+header>.logo {
+    position: relative;
+    display: flex;
+}
+
+header>.logo>a {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header>.logo>a>img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+header>.logo>a>p {
+    font-size: 17pt;
+    color: #fff;
+    font-weight: 600;
+}
+
+header>nav {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -41,18 +69,18 @@ header > nav{
     height: fit-content;
 }
 
-nav > ul{
+nav>ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     gap: 10px;
 }
 
-nav > ul > li{
+nav>ul>li {
     list-style: none;
 }
 
-nav > ul > li > a{
+nav>ul>li>a {
     background-color: #fff;
     border-radius: 10px;
     font-size: 13pt;
@@ -71,7 +99,7 @@ form {
     padding: 2em;
 }
 
-form > h1{
+form>h1 {
     font-size: 30pt;
     color: #2c2c2c;
     text-transform: uppercase;
@@ -86,13 +114,13 @@ form>.form-control {
     height: fit-content;
 }
 
-.form-control > label{
+.form-control>label {
     font-size: 25pt;
     color: #2c2c2c;
 }
 
-.form-control > input,
-.form-control > textarea{
+.form-control>input,
+.form-control>textarea {
     position: relative;
     display: flex;
     width: fit-content;
@@ -106,11 +134,11 @@ form>.form-control {
     color: #2c2c2c;
 }
 
-.form-control > textarea{
+.form-control>textarea {
     height: 200px;
 }
 
-form>input[type='submit']{
+form>input[type='submit'] {
     background-color: rgb(53, 163, 53);
     border: none;
     border-radius: 20px;
@@ -125,11 +153,11 @@ form>input[type='submit']{
     cursor: pointer;
 }
 
-form>input[type='submit']:hover{
+form>input[type='submit']:hover {
     opacity: .5;
 }
 
-footer{
+footer {
     position: relative;
     display: flex;
     width: 100%;
@@ -139,4 +167,112 @@ footer{
     justify-content: center;
     align-items: center;
     color: #fff;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    gap: 20px;
+    padding: 3em 0;
+}
+
+section>.section-title {
+    font-size: 30pt;
+    color: #2c2c2c;
+    text-transform: uppercase;
+}
+
+.task-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    gap: 20px;
+}
+
+.task-list>li {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    min-width: 400px;
+    min-height: 150px;
+    background-color: whitesmoke;
+    border: 2px solid #d3d3d3;
+    padding: 1em 2em;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.task-list>li>.title {
+    font-size: 15pt;
+}
+
+.task-list>li>.done {
+    color: rgb(53, 163, 53);
+    text-decoration: line-through;
+}
+
+.task-list>li>.actions {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    gap: 15px;
+    margin-right: auto;
+}
+
+.task-list>li>.actions>form {
+    padding: 0;
+}
+
+.task-list>li>.actions>a,
+.task-list>li>.actions>form>button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 900;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.task-list>li>.actions i {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 14pt;
+}
+
+.icon:hover {
+    opacity: .5;
+}
+
+.confirm-icon {
+    background-color: rgb(53, 163, 53);
+}
+
+.edit-icon {
+    background-color: #cccc00;
+}
+
+.delete-icon {
+    background-color: #d11a2a;
 }
